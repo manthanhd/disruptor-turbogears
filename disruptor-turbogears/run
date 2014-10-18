@@ -1,0 +1,5 @@
+#!/bin/bash
+python setup.py develop
+gearbox setup-app -c production.ini
+gearbox serve --debug -c production.ini heroku_port=$PORT
+

@@ -94,6 +94,11 @@ class User(MappedClass):
     email_address = FieldProperty(s.String)
     display_name = FieldProperty(s.String)
 
+
+    #add custom fields here
+
+    #arduino_device_list=FieldProperty(s.Array, if_missing=[])
+
     _groups = ForeignIdProperty(Group, uselist=True)
     groups = RelationProperty(Group)
 
