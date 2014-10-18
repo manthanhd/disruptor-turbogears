@@ -63,7 +63,9 @@ class User(MappedClass):
     class __mongometa__:
         session = DBSession
         name = 'tg_user'
-        unique_indexes = [('user_name',),]
+        unique_indexes = [('user_name',),
+                          ('email_address','email_address'),
+                          ('user_name',),]
 
     class PasswordProperty(FieldProperty):
         @classmethod
@@ -95,13 +97,13 @@ class User(MappedClass):
     display_name = FieldProperty(s.String)
 
 
-    #add custom fields here
-    arduino_device_list= FieldProperty(s.Anything, if_missing=[])
+    field_list= FieldProperty(s.Anything, if_missing=[])
+    token = FieldProperty(s.Anything, if_missing=None)
 
     _groups = ForeignIdProperty(Group, uselist=True)
     groups = RelationProperty(Group)
 
-    password = PasswordProperty(s.String)
+    email_address = PasswordProperty(s.String)
     created = FieldProperty(s.DateTime, if_missing=datetime.now)
 
     @property

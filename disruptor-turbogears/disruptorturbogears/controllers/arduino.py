@@ -5,8 +5,6 @@ from tg import expose, validate, url, config
 from disruptorturbogears.lib.validators import report_validation_errors
 from disruptorturbogears.model.arduino import ArduinoModel
 
-__author__ = 'SilentHK'
-
 
 class ArduinoController(JSONResponseController):
 

@@ -5,7 +5,7 @@ from ming import schema as s
 from disruptorturbogears.model import DBSession
 
 
-class FarmModel(MappedClass):
+class FieldModel(MappedClass):
     class __mongometa__:
         session = DBSession
         name = 'farms'

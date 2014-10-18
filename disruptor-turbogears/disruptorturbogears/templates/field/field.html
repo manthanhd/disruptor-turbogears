@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-1">
 
-      <form action="${tg.url('/farm/add_farm', params=dict(came_from=None, __logins=0))}"
+      <form action="${tg.url('/field/add_field', params=dict(came_from=None, __logins=0))}"
             method="post" accept-charset="UTF-8" class="form-horizontal">
 
         <div class="form-group">
@@ -64,18 +64,19 @@
     </div>
   </div>
 
-
+<!--
     <div>
-        <ol py:if="farm_list">
-            <li py:for="farm in farm_list">
-                name ${farm.name} <br>
-                type ${farm.crop_type} <br>
-                lat ${farm.field_location_center[0]} <br>
-                long ${farm.field_location_center[1]} <br>
-                area ${farm.area} <br>
+        <ol py:if="field_list">
+            <li py:for="field in field_list">
+                name ${field.name} <br>
+                type ${field.crop_type} <br>
+                lat ${field.field_location_center[0]} <br>
+                long ${field.field_location_center[1]} <br>
+                area ${field.area} <br>
             </li>
         </ol>
     </div>
+-->
 
 </body>
 </html>
