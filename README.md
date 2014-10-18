@@ -1,2 +1,0 @@
-disruptor-turbogears
-====================
