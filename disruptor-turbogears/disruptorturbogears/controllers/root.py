@@ -7,6 +7,7 @@ from tg.exceptions import HTTPFound
 from tg import predicates
 from disruptorturbogears import model
 from disruptorturbogears.controllers.arduino import ArduinoController
+from disruptorturbogears.controllers.farm import FarmController
 from disruptorturbogears.controllers.secure import SecureController
 from tgext.admin.mongo import BootstrapTGMongoAdminConfig as TGAdminConfig
 from tgext.admin.controller import AdminController
@@ -34,6 +35,7 @@ class RootController(BaseController):
     secc = SecureController()
     admin = AdminController(model, None, config_type=TGAdminConfig)
     arduino = ArduinoController()
+    farm = FarmController()
 
     error = ErrorController()
 

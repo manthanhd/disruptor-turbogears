@@ -96,8 +96,7 @@ class User(MappedClass):
 
 
     #add custom fields here
-
-    #arduino_device_list=FieldProperty(s.Array, if_missing=[])
+    arduino_device_list= FieldProperty(s.Anything, if_missing=[])
 
     _groups = ForeignIdProperty(Group, uselist=True)
     groups = RelationProperty(Group)

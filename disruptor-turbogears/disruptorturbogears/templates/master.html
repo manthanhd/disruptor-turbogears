@@ -13,6 +13,7 @@
 
 <body py:match="body" py:attrs="select('@*')">
   <!-- Navbar -->
+  <!--
   <nav class="navbar navbar-default">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
@@ -43,6 +44,12 @@
     </div>
   </nav>
 
+  -->
+
+    <nav class="navbar navbar-default">
+
+    </nav>
+
   <div class="container">
     <!-- Flash messages -->
     <py:with vars="flash=tg.flash_obj.render('flash', use_js=False)">
@@ -59,10 +66,14 @@
 
 
   <!-- Footer -->
+
   <footer class="footer hidden-xs hidden-sm">
+        <!--
     <a class="pull-right" href="http://www.turbogears.org"><img style="vertical-align:middle;" src="${tg.url('/img/under_the_hood_blue.png')}" alt="TurboGears 2" /></a>
     <p>Copyright &copy; ${getattr(tmpl_context, 'project_name', 'TurboGears2')} ${h.current_year()}</p>
+      -->
   </footer>
+
 
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="${tg.url('/javascript/bootstrap.min.js')}"></script>
